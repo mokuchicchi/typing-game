@@ -11,13 +11,13 @@ const StartPage = () => {
 		router.push(`/play?name=${name}`);
 	};
 	return (
-		<div className='border mx-120 my-60'>
+		<div className='border-2 mx-120 my-60'>
 			<h1 className='text-8xl my-10'>Typing Game</h1>
 			<input
 				type='text'
 				value={name}
 				onChange={(e) => setName(e.target.value)}
-				className='text-4xl w-1/2 h-20 my-8 p-4 border rounded-sm'
+				className='text-4xl w-1/2 h-20 my-8 p-4 border-2 rounded-sm'
 			/>
 			<br />
 			<button

@@ -35,7 +35,6 @@ const GetUserData = async ({ name }: PropsType) => {
 			</ul>
 		);
 	} catch (err) {
-		console.error('Failed to fetch users', err);
 		return <div>ユーザーデータの取得に失敗しました。</div>;
 	}
 };

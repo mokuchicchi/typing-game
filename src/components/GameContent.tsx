@@ -29,7 +29,6 @@ const GameContent = (props: GameContentProps) => {
 		const baseScore = 10000;
 		const timeDeduction = Math.floor(timeInSec * 100);
 		const score = Math.max(1000, baseScore - timeDeduction);
-		console.log('エンド');
 
 		return { timeInSec, score };
 	};
@@ -40,7 +39,6 @@ const GameContent = (props: GameContentProps) => {
 
 	useEffect(() => {
 		setStartTime(Date.now());
-		console.log('スタート');
 	}, []);
 
 	useEffect(() => {
@@ -70,7 +68,7 @@ const GameContent = (props: GameContentProps) => {
 	}, [questionNumber, currentPosition]);
 
 	return isCompleted ? (
-		<div className='border mx-120 my-6'>
+		<div className='border-2 mx-120 my-6'>
 			<PlayerResult name={name} totalTime={totalTime} playerScore={playerScore} />
 			<h1 className='text-4xl my-4'>Ranking</h1>
 			{children}
